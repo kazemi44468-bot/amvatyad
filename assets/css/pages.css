@@ -33,7 +33,7 @@
 @media(max-width:650px){.inner-hero,.story-feature,.calendar-feature,.about-layout,.contact-layout{grid-template-columns:1fr;gap:22px}.inner-hero{padding-left:20px;padding-right:20px}.inner-hero-image{height:205px;grid-row:1}.page-section{padding-top:40px;padding-bottom:50px}.photo-service-grid,.memorial-examples{grid-template-columns:1fr}.photo-service-grid img,.memorial-examples img{height:220px}.photo-service-grid p{min-height:0}.story-feature img,.calendar-feature img,.about-layout>img,.contact-layout>img{height:220px}.story-topics,.calendar-grid{grid-template-columns:1fr 1fr;gap:9px}.story-topics article,.calendar-grid article{padding:15px}.story-feature h2,.calendar-feature h2,.about-layout h2,.contact-layout h2{font-size:25px}.calendar-feature{padding:16px}}
 
 /* بافت تصویری و تزئینات صفحه‌های داخلی */
-.inner-hero{background-image:linear-gradient(100deg,#f7f5edf2,#edf1e9e8),url('../images/soft-landscape.svg');background-size:cover;background-position:center}
+.inner-hero{background-image:linear-gradient(100deg,#f7f5edf2,#edf1e9e8),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center}
 .inner-hero-image{position:relative;background:#e2e8dc}
 .inner-hero-image:after{content:"";position:absolute;inset:0;border:1px solid #ffffff8a;pointer-events:none}
 .page-section{background-image:radial-gradient(ellipse at 100% 0%,#e7ede2 0,transparent 24%)}
@@ -41,6 +41,6 @@
 .photo-service-grid article:hover{transform:translateY(-4px);box-shadow:0 16px 35px #233a2b16}
 .photo-service-grid img{background:#e7ece2;object-fit:cover}
 .story-feature{padding:22px;background:linear-gradient(110deg,#f7f5ed,#e8eee5);border:1px solid #e4e7dc}
-.calendar-feature{background-image:linear-gradient(100deg,#f6f5efed,#f6f5efed),url('../images/memorial-garden.svg');background-size:cover}
+.calendar-feature{background-image:linear-gradient(100deg,#f6f5efed,#f6f5efed),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85');background-size:cover}
 .about-layout{padding:25px;background:linear-gradient(110deg,#f5f4ed,#e9eee5)}
 .contact-layout{padding:25px;background:linear-gradient(110deg,#f5f4ed,#e9eee5)}
