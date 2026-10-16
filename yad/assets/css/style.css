@@ -1,3 +1,8 @@
+/* Use only local Persian font files stored in the repository. */
+@font-face{font-family:VazirmatnLocal;src:url('../../../assets/fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:VazirmatnLocal;src:url('../../../assets/fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:VazirmatnLocal;src:url('../../../assets/fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+html,body{font-family:VazirmatnLocal,Tahoma,sans-serif}
 /* ============ Yadamvat Shared Design System ============ */
 :root{
   --ink:#1e2f28;--ink-soft:#4a5d52;--muted:#7a8a7f;
@@ -365,7 +370,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 /* ============ Reveal ============ */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.in,.reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-d1{transition-delay:.1s}
 .reveal-d2{transition-delay:.2s}
 .reveal-d3{transition-delay:.3s}
