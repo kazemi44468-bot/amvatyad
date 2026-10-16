@@ -15,3 +15,22 @@
 .create-section{background-image:linear-gradient(115deg,#e7eee6f5,#f5f1e6f5),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85');background-size:cover;background-position:center}
 .site-footer{background-image:linear-gradient(115deg,#183b35f5,#183b35f5),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center}
 @media(max-width:700px){.hero-image{aspect-ratio:1/1;border-radius:44% 44% 5px 5px}.hero-art:after{inset:8% 2% 10%}}
+
+/* Homepage spiritual intentions */
+.spiritual-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 0 24px}
+.spiritual-heading h2{font-size:clamp(22px,3vw,31px);line-height:1.8;color:var(--pine);margin:5px 0}
+.spiritual-heading h2 em{font-style:normal;color:#a28a5b}
+.spiritual-heading>p{max-width:460px;color:var(--muted);font-size:13px;line-height:2.2}
+.spiritual-section{padding-top:65px;padding-bottom:70px}
+.spiritual-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.spiritual-card{position:relative;min-height:215px;padding:22px;background:#fffefa;border:1px solid #e5e7dd;border-radius:4px;box-shadow:0 12px 30px #253b3508;overflow:hidden}
+.spiritual-symbol{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#edf2e9;color:#5c7962;font-size:22px;margin-bottom:13px}
+.spiritual-card .service-no{display:block;color:#a08a5b;font-size:10px;margin-bottom:4px}
+.spiritual-card h3{font-size:16px;color:var(--pine);margin:3px 0 7px}
+.spiritual-card p{min-height:48px;color:var(--muted);font-size:12px;line-height:2.1;margin:0 0 13px}
+.intention-button,.intention-link{display:inline-flex;align-items:center;gap:8px;border:0;border-bottom:1px solid #d7c9a8;background:transparent;color:#856d3e;font-size:12px;font-weight:600;padding:5px 0;cursor:pointer}
+.intention-button:hover,.intention-link:hover{color:var(--pine);border-color:var(--pine)}
+.spiritual-card-soft{background:linear-gradient(135deg,#f8f5ec,#eef2e9)}
+.intention-feedback{min-height:26px;color:#52765b;font-size:12px;margin-top:14px}
+@media(max-width:760px){.spiritual-heading{display:block}.spiritual-heading>p{margin-top:8px}.spiritual-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.spiritual-grid{grid-template-columns:1fr}.spiritual-card{min-height:0}.spiritual-card p{min-height:0}.spiritual-section{padding-top:45px;padding-bottom:45px}}
