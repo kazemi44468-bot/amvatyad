@@ -31,6 +31,10 @@ jobs:
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1400&q=82" -o images/memorial-candle.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=84" -o images/memorial-garden.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1589137923508-65101feea0f9?auto=format&fit=crop&w=1400&q=82" -o images/memorial-white-flowers.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1400&q=82" -o images/memorial-lilies.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=82" -o images/memorial-sunrise.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=82" -o images/memorial-mountains.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1400&q=82" -o images/memorial-flower-closeup.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://upload.wikimedia.org/wikipedia/commons/2/27/Flowers_in_park.webm" -o media/flowers-in-park.webm
           curl --fail --location --retry 3 --retry-delay 2 "https://upload.wikimedia.org/wikipedia/commons/a/ab/Rain_thunder_and_birds.ogg" -o media/rain-thunder-birds.ogg
           file images/*.jpg media/*
