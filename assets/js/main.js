@@ -68,3 +68,14 @@ wt.querySelectorAll('[data-kind]').forEach(btn=>btn.addEventListener('click',()=
     catch(e){if(e&&e.name!=='AbortError'){const box=document.createElement('textarea');box.value=text;document.body.appendChild(box);box.select();document.execCommand('copy');box.remove();window.showToast('متن برای ارسال کپی شد');}}
   }));
 })();
+
+/* Download a selected text as a UTF-8 text file. */
+document.querySelectorAll('[data-download-text]').forEach(function(button){
+  button.addEventListener('click',function(){
+    const blob=new Blob([button.dataset.downloadText||''],{type:'text/plain;charset=utf-8'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=button.dataset.downloadName||'متن-یادبود.txt';
+    document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+    window.showToast('فایل متن آماده شد');
+  });
+});
