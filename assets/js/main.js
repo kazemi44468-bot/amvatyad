@@ -79,3 +79,6 @@ document.querySelectorAll('[data-download-text]').forEach(function(button){
     window.showToast('فایل متن آماده شد');
   });
 });
+
+/* Occasion shortcuts in the memorial photo archive */
+document.querySelectorAll('[data-photo-category]').forEach(function(button){button.addEventListener('click',function(){const filter=document.querySelector('[data-bank-filter="photo-grid"]');const search=document.querySelector('[data-bank-search="photo-grid"]');if(!filter)return;filter.value=button.dataset.photoCategory||'all';if(search)search.value='';filter.dispatchEvent(new Event('change',{bubbles:true}));document.querySelectorAll('[data-photo-category]').forEach(function(item){item.classList.toggle('is-active',item===button)});});});
