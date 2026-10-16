@@ -24,15 +24,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p images
+          mkdir -p images media
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=82" -o images/memorial-roses.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1400&q=82" -o images/memorial-bouquet.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=82" -o images/soft-landscape.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1400&q=82" -o images/memorial-candle.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=84" -o images/memorial-garden.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1589137923508-65101feea0f9?auto=format&fit=crop&w=1400&q=82" -o images/memorial-white-flowers.jpg
-          file images/*.jpg
-          du -h images/*.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://upload.wikimedia.org/wikipedia/commons/2/27/Flowers_in_park.webm" -o media/flowers-in-park.webm
+          curl --fail --location --retry 3 --retry-delay 2 "https://upload.wikimedia.org/wikipedia/commons/a/ab/Rain_thunder_and_birds.ogg" -o media/rain-thunder-birds.ogg
+          file images/*.jpg media/*
+          du -h images/*.jpg media/*
 
       - name: Commit photos to repository
         shell: bash
@@ -40,7 +42,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/*.jpg
+          git add images/*.jpg media/*
           if git diff --cached --quiet; then
             echo "No photo changes to commit."
             exit 0
