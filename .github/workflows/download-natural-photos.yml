@@ -37,6 +37,10 @@ jobs:
           curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1400&q=82" -o images/memorial-flower-closeup.jpg
           curl --fail --location --retry 3 --retry-delay 2 "https://upload.wikimedia.org/wikipedia/commons/2/27/Flowers_in_park.webm" -o media/flowers-in-park.webm
           curl --fail --location --retry 3 --retry-delay 2 "https://upload.wikimedia.org/wikipedia/commons/a/ab/Rain_thunder_and_birds.ogg" -o media/rain-thunder-birds.ogg
+          curl --fail --location --retry 3 --retry-delay 2 "https://commons.wikimedia.org/wiki/Special:Redirect/file/Flower.webm" -o media/flower-closeup.webm
+          curl --fail --location --retry 3 --retry-delay 2 "https://commons.wikimedia.org/wiki/Special:Redirect/file/Time_lapse_of_a_gardenia_flower_opening.webm" -o media/gardenia-opening.webm
+          curl --fail --location --retry 3 --retry-delay 2 "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rain.ogg" -o media/rain.ogg
+          curl --fail --location --retry 3 --retry-delay 2 "https://commons.wikimedia.org/wiki/Special:Redirect/file/Walk_in_the_rainforest.ogg" -o media/rainforest-birds.ogg
           file images/*.jpg media/*
           du -h images/*.jpg media/*
 
