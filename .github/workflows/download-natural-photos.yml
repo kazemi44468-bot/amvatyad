@@ -1,0 +1,48 @@
+name: Download natural photos for Amvatyad
+
+on:
+  push:
+    paths:
+      - ".github/workflows/download-natural-photos.yml"
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  download-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download optimized natural photographs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p images
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=82" -o images/memorial-roses.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1400&q=82" -o images/memorial-bouquet.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=82" -o images/soft-landscape.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1400&q=82" -o images/memorial-candle.jpg
+          curl --fail --location --retry 3 --retry-delay 2 "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=82" -o images/memorial-garden.jpg
+          file images/*.jpg
+          du -h images/*.jpg
+
+      - name: Commit photos to repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/*.jpg
+          if git diff --cached --quiet; then
+            echo "No photo changes to commit."
+            exit 0
+          fi
+          git commit -m "Add optimized natural remembrance photos"
+          git push
