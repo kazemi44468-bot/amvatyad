@@ -603,3 +603,55 @@ body{font-family:VazirmatnLocal,Tahoma,sans-serif}
 .bank-quote h3{font-size:14px;color:var(--green-deep);margin-bottom:8px}
 @media(max-width:900px){.bank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bank-image{height:210px}}
 @media(max-width:560px){.bank-grid{grid-template-columns:1fr;gap:16px}.bank-image{height:230px}.bank-card-body{padding:16px}.bank-toolbar{align-items:stretch}.bank-search{min-width:100%}}
+
+
+/* Mobile dock: compact, branded and thumb-friendly */
+.mobile-bottom-nav{display:none}
+@media(max-width:760px){
+  body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}
+  .mobile-bottom-nav{
+    position:fixed;z-index:1000;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));
+    display:grid;grid-template-columns:1fr 1fr 1.18fr 1fr 1fr;align-items:center;gap:3px;
+    padding:7px 8px 6px;border:1px solid rgba(255,255,255,.65);border-radius:21px;
+    background:rgba(250,250,245,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    box-shadow:0 9px 34px rgba(24,57,44,.2),inset 0 1px 0 rgba(255,255,255,.95);
+  }
+  .mobile-bottom-nav:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(125deg,rgba(190,157,94,.65),rgba(255,255,255,.2),rgba(64,117,88,.4));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+  .mobile-bottom-nav a{position:relative;z-index:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:49px;padding:4px 1px;border-radius:13px;color:#64776b;text-decoration:none;font-size:9.5px;font-weight:650;white-space:nowrap}
+  .mobile-bottom-nav .dock-icon{font-size:18px;line-height:1.1}
+  .mobile-bottom-nav a.is-current{background:linear-gradient(145deg,#e7eee4,#f7f5ec);color:#214e3d}
+  .mobile-bottom-nav a.is-current .dock-icon{color:#b18a4b}
+  .mobile-bottom-nav .dock-brand{min-height:60px;margin-top:-18px;gap:2px;color:#214e3d}
+  .mobile-bottom-nav .dock-logo{display:flex;align-items:center;justify-content:center;width:47px;height:47px;border-radius:16px;background:linear-gradient(145deg,#234f3f,#17392e);border:2px solid #f4e7c7;box-shadow:0 5px 13px rgba(23,57,46,.25)}
+  .mobile-bottom-nav .dock-logo img{display:block;width:30px;height:30px;object-fit:contain;filter:brightness(0) invert(1)}
+  .mobile-bottom-nav .dock-brand span:last-child{font-size:9px;font-weight:800}
+  .nav{padding:8px 10px}
+  .nav-inner{gap:8px}
+  .brand-mark{width:36px;height:36px;border-radius:11px}
+  .brand-title{font-size:14px}
+  .brand-sub{font-size:9px}
+  .nav-toggle,.burger{border:1px solid #dfe7dc!important;border-radius:12px!important;background:linear-gradient(145deg,#fffdf8,#edf3eb)!important;box-shadow:0 3px 12px rgba(29,69,52,.08)}
+  .mobile-menu{border:1px solid rgba(188,161,105,.36)!important;border-radius:17px!important;background:rgba(251,251,246,.98)!important;box-shadow:0 15px 36px rgba(25,57,43,.17)!important;padding:10px!important}
+  .mobile-menu>a{border-radius:10px}
+  /* Resource and page cards remain two-column on mobile */
+  .bank-grid,.features-grid,.services-grid,.process-grid,.cards-grid,.stats-grid,.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
+  .bank-card{border-radius:14px}
+  .bank-image{height:132px!important}
+  .bank-card-body{padding:11px}
+  .bank-card h3{font-size:12.5px;line-height:1.65}
+  .bank-card p{font-size:11px;line-height:1.8}
+  .bank-actions{gap:5px}
+  .bank-action{font-size:10px;padding:7px 8px}
+  .features-grid .f-card,.services-grid>* ,.process-grid>* ,.cards-grid>*{min-width:0}
+  .features-grid .f-card img{height:118px!important}
+  .bank-toolbar{gap:8px}
+  .bank-search{min-width:100%}
+}
+@media(max-width:360px){
+  .mobile-bottom-nav{left:6px;right:6px;padding:6px 5px;gap:1px}
+  .mobile-bottom-nav a{font-size:8.5px}
+  .mobile-bottom-nav .dock-logo{width:42px;height:42px}
+  .mobile-bottom-nav .dock-brand{margin-top:-14px}
+  .bank-grid,.features-grid,.services-grid,.process-grid,.cards-grid,.stats-grid,.gallery-grid{gap:8px}
+  .bank-card-body{padding:9px}
+}
