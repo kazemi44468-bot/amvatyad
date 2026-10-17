@@ -16,7 +16,7 @@ seen, records = set(), []
 session = requests.Session()
 def search(query):
     params = {"action":"query","format":"json","generator":"search","gsrsearch":query,
-              "gsrnamespace":6,"gsrlimit":50,"prop":"imageinfo","iiprop":"url|extmetadata",
+              "gsrnamespace":6,"gsrlimit":50,"prop":"imageinfo","iiprop":"url|extmetadata|mime",
               "iiurlwidth":1200}
     try:
         data=session.get(API,params=params,headers=HEADERS,timeout=35).json()
