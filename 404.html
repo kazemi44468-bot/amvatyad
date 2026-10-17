@@ -13,6 +13,7 @@
 .error-card h1{font-size:clamp(23px,4vw,32px);color:var(--green-deep);margin:18px 0 12px}
 .error-card p{color:var(--ink-soft);margin:0 auto 26px;max-width:470px}
 .error-mark{width:58px;height:58px;object-fit:contain;margin:0 auto 18px}
+.back-to-top{position:fixed;left:20px;bottom:22px;display:flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid #d6bd7d;border-radius:999px;background:#1b4438;color:#fff8e9;box-shadow:0 8px 24px #1b443833;font:inherit;font-size:12px;cursor:pointer}.back-to-top span:first-child{font-size:20px;color:#e6c778}@media(max-width:500px){.back-to-top{left:12px;bottom:12px}} 
 </style>
 </head>
 <body>
@@ -24,6 +25,7 @@
 <p>ممکن است نشانی تغییر کرده باشد یا صفحه هنوز ساخته نشده باشد. از صفحه نخست می‌توانید مسیر درست را پیدا کنید.</p>
 <a class="btn btn-primary" href="/amvatyad/index.html">بازگشت به اموات یاد</a>
 </section>
+<button id="backToTop" class="back-to-top" type="button" aria-label="بازگشت به بالای صفحه" title="بازگشت به بالا" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span aria-hidden="true">↑</span><span>بالای صفحه</span></button>
 </main>
 </body>
 </html>
