@@ -26,6 +26,7 @@ def search(query):
 
 for query in QUERIES:
     if len(records) >= 100: break
+    added_this_query = 0
     for page in search(query):
         title=page.get("title","")
         if title in seen: continue
@@ -50,8 +51,9 @@ for query in QUERIES:
             filename="gallery-%03d.jpg" % (len(records)+1)
             im.save(ROOT/filename,"JPEG",quality=88,optimize=True,progressive=True)
             records.append({"file":filename,"title":title,"artist":artist,"license":license_name,"license_url":license_url,"source":info.get("descriptionurl",""),"query":query})
+            added_this_query += 1
             print("%d/100 %s %s" % (len(records),filename,title))
-            if len(records)>=100: break
+            if len(records)>=100 or added_this_query>=8: break
         except Exception as exc:
             print("Skip",title,exc)
         time.sleep(.08)
