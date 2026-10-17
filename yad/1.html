@@ -1130,5 +1130,7 @@ if (heroVisual && window.matchMedia('(min-width: 981px)').matches) {
 }
 </script>
 <script>document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("visible","in")});</script>
+<button id="backToTop" type="button" aria-label="بازگشت به بالای صفحه" style="position:fixed;left:18px;bottom:22px;z-index:9999;display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #d6bd7d;border-radius:999px;background:#1b4438;color:#fff8e9;box-shadow:0 8px 24px #1b443833;font:inherit;font-size:12px;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s"><span style="color:#e6c778;font-size:18px">↑</span><span>بالای صفحه</span></button>
+<script>(function(){const b=document.getElementById('backToTop');function sync(){const v=window.scrollY>320;b.style.opacity=v?'1':'0';b.style.visibility=v?'visible':'hidden';b.style.transform=v?'translateY(0)':'translateY(8px)'}window.addEventListener('scroll',sync,{passive:true});sync();b.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}))})();</script>
 </body>
 </html>
