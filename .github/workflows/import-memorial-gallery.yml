@@ -27,5 +27,6 @@ jobs:
           git add images/gallery images/GALLERY-CREDITS.md
           if ! git diff --cached --quiet; then
             git commit -m "Import memorial gallery assets"
+            git pull --rebase origin main
             git push
           fi
