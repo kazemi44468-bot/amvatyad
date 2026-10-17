@@ -82,3 +82,18 @@ document.querySelectorAll('[data-download-text]').forEach(function(button){
 
 /* Occasion shortcuts in the memorial photo archive */
 document.querySelectorAll('[data-photo-category]').forEach(function(button){button.addEventListener('click',function(){const filter=document.querySelector('[data-bank-filter="photo-grid"]');const search=document.querySelector('[data-bank-search="photo-grid"]');if(!filter)return;filter.value=button.dataset.photoCategory||'all';if(search)search.value='';filter.dispatchEvent(new Event('change',{bubbles:true}));document.querySelectorAll('[data-photo-category]').forEach(function(item){item.classList.toggle('is-active',item===button)});});});
+/* Accessible floating return-to-top control on every page using the shared script */
+(function(){
+ function installBackToTop(){
+  if(document.getElementById('backToTop')) return;
+  const button=document.createElement('button');
+  button.id='backToTop';button.type='button';button.className='back-to-top';
+  button.setAttribute('aria-label','بازگشت به بالای صفحه');button.title='بازگشت به بالا';
+  button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg><span>بالای صفحه</span>';
+  document.body.appendChild(button);
+  const sync=()=>button.classList.toggle('is-visible',window.scrollY>320);
+  window.addEventListener('scroll',sync,{passive:true});sync();
+  button.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installBackToTop,{once:true});else installBackToTop();
+})();
