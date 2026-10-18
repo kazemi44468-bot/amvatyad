@@ -68,14 +68,14 @@
       <p>قرار نیست همه چیز در یک روز آماده شود. یادمان می‌تواند آرام‌آرام و با همراهی اعضای خانواده شکل بگیرد؛ هرکس خاطره‌ای بیفزاید، تصویری را شناسایی کند یا قصه‌ای را که سال‌ها در ذهن داشته بنویسد. همین جزئیات کوچک‌اند که یک آرشیو را به میراثی زنده و انسانی تبدیل می‌کنند.</p>
       <a href="create.html" class="text-link">آغاز ساخت یادمان <span aria-hidden="true">←</span></a>
     </div>
-    <figure class="home-legacy-image"><img src="images/memorial-bouquet.jpg" alt="دسته‌گل روشن در فضایی آرام و طبیعی" loading="lazy"><figcaption>برای خاطره‌هایی که در دل خانواده ادامه دارند</figcaption></figure>
+    <figure class="home-legacy-image"><img src="images/poster-memory.svg" alt="قاب خاطره میان گل‌های سفید" loading="lazy"><figcaption>برای خاطره‌هایی که در دل خانواده ادامه دارند</figcaption></figure>
   </div>
 </section>
 <!-- Image-led editorial section -->
 <section class="photo-mosaic"><div class="container"><div class="section-head"><span class="section-tag">روایت · خاطره · ماندگاری</span><h2>هر خاطره، بخشی از میراث یک زندگی</h2><p>فضایی برای نگهداری روایت‌ها، عکس‌ها و یادهای خانوادگی؛ با انتخاب و اختیار خانواده.</p></div><div class="photo-mosaic-grid">
-<a class="photo-tile" href="services.html#life"><img src="images/memorial-bouquet.jpg" alt="گل‌های یادبود در فضایی آرام" loading="lazy"><div class="photo-tile-copy"><h3>یادبود با احترام</h3><p>بیان محبت و ادای احترام، به شیوه‌ای ساده و شخصی</p></div></a>
-<a class="photo-tile" href="services.html#gallery"><img src="images/memorial-roses.jpg" alt="گل‌های رز در فضایی طبیعی" loading="lazy"><div class="photo-tile-copy"><h3>گنجینه خاطرات</h3><p>تصاویر، اسناد و روایت‌هایی برای نسل‌های بعد</p></div></a>
-<a class="photo-tile" href="services.html#spiritual"><img src="images/memorial-candle.jpg" alt="شمع روشن در فضای یادبود" loading="lazy"><div class="photo-tile-copy"><h3>لحظه‌ای برای یاد</h3><p>امکانات نمادین و معنوی، بدون اجبار یا رقابت</p></div></a>
+<a class="photo-tile" href="services.html#life"><img src="images/poster-memory.svg" alt="قاب خاطره میان گل‌های سفید" loading="lazy"><div class="photo-tile-copy"><h3>یادبود با احترام</h3><p>بیان محبت و ادای احترام، به شیوه‌ای ساده و شخصی</p></div></a>
+<a class="photo-tile" href="services.html#gallery"><img src="images/poster-sunset.svg" alt="چشم‌انداز آرام در غروب" loading="lazy"><div class="photo-tile-copy"><h3>گنجینه خاطرات</h3><p>تصاویر، اسناد و روایت‌هایی برای نسل‌های بعد</p></div></a>
+<a class="photo-tile" href="services.html#spiritual"><img src="images/poster-candle.svg" alt="فانوس روشن و گل‌های سفید" loading="lazy"><div class="photo-tile-copy"><h3>لحظه‌ای برای یاد</h3><p>امکانات نمادین و معنوی، بدون اجبار یا رقابت</p></div></a>
 </div></div></section>
 <!-- ============ Process ============ -->
 <section class="home-process section">
@@ -191,6 +191,16 @@
  .photo-mosaic{padding-top:40px;padding-bottom:42px}
  .home-process:before{background-position:32% center}
 }
+
+/* Poster-derived image crops: keep homepage imagery from one art direction */
+.home-hero-image{background-image:url('images/poster-hero.svg')!important;background-position:center!important}
+.home-story:before{background-image:linear-gradient(90deg,rgba(248,245,237,.96),rgba(248,245,237,.89)),url('images/poster-memory.svg')!important}
+.home-legacy-section{background-image:linear-gradient(110deg,rgba(233,239,229,.96),rgba(247,243,231,.91)),url('images/poster-memory.svg')!important}
+.home-legacy-image img{object-fit:cover;object-position:center}
+.photo-mosaic:before{background-image:linear-gradient(180deg,rgba(248,245,237,.95),rgba(248,245,237,.90)),url('images/poster-sunset.svg')!important}
+.home-process:before{background-image:url('images/poster-candle.svg')!important;background-size:cover!important;background-position:left center!important}
+.home-closing{background-image:linear-gradient(90deg,rgba(248,245,237,.95),rgba(248,245,237,.84)),url('images/poster-sunset.svg')!important}
+.photo-tile img{object-fit:cover}
 
 </style>
 
