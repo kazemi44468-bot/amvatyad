@@ -516,14 +516,13 @@ body{font-family:VazirmatnLocal,Tahoma,sans-serif}
 }
 /* The required visual order is maintained consistently on every page. */
 .nav-links{gap:1px}
+/* ترتیب قطعی منوی اصلی: خانه، درباره ما، گنجینه یاد، دانش‌نامه، متن‌نویسی، ایجاد یادمان */
 .nav-links>a[href="index.html"]{order:1}
-.nav-links>a[href="about.html"]{order:2}
-.nav-links>a[href="services.html"]{order:3}
-.nav-links>a[href="process.html"]{order:4}
-.nav-links>.nav-dropdown{order:5}
-.nav-links>a[href="text-writing.html"]{order:6}
-.nav-links>a[href="faq.html"]{order:7}
-.nav-links>a.nav-cta{order:8}
+.nav-links>.nav-dropdown:has(>.nav-dropdown-trigger[href="about.html"]){order:2}
+.nav-links>.nav-dropdown:has(>.nav-dropdown-trigger[href="multimedia.html"]){order:3}
+.nav-links>a[href="knowledge.html"]{order:4}
+.nav-links>a[href="text-writing.html"]{order:5}
+.nav-links>a.nav-cta{order:6}
 @media(min-width:761px) and (max-width:1100px){
   .nav{padding:8px 12px}
   .nav-inner{gap:8px}
