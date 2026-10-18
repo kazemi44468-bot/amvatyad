@@ -155,6 +155,43 @@
   .hero-grid{grid-template-columns:1fr !important;gap:50px}
   .hero-visual{max-width:440px;margin:auto}
 }
+/* Unified visual direction based on assets/images/index.png */
+:root{--memory-cream:#f6f2e8;--memory-forest:#163b2f;--memory-gold:#c6a66d}
+.home-hero{background-color:#17372d}
+.home-hero-image{background-position:center 54%;filter:saturate(.83) contrast(.97)}
+.home-hero-shade{background:linear-gradient(270deg,rgba(12,39,30,.90) 0%,rgba(16,47,36,.76) 34%,rgba(16,47,36,.36) 65%,rgba(16,47,36,.06) 100%),linear-gradient(0deg,rgba(12,34,27,.62),transparent 43%),linear-gradient(180deg,rgba(17,41,32,.12),transparent 28%)}
+.home-hero:after{content:"";position:absolute;inset:18px;z-index:-1;border:1px solid rgba(230,205,153,.24);pointer-events:none}
+.home-hero-eyebrow{color:#ead7b2}
+.home-hero h1 em{color:#e7cf9d}
+.home-story{background:var(--memory-cream)}
+.home-story:before{background:linear-gradient(90deg,rgba(248,245,237,.96),rgba(248,245,237,.89)),url('images/memorial-bouquet.jpg') center/cover}
+.home-story-heading h2 em,.home-legacy-copy h2 em{color:#9b7842}
+.home-legacy-section{background:linear-gradient(110deg,rgba(233,239,229,.96),rgba(247,243,231,.91)),url('images/memorial-bouquet.jpg') center/cover}
+.home-legacy-image{padding:10px;background:rgba(255,255,255,.48);border:1px solid rgba(177,145,88,.34);box-shadow:0 18px 48px rgba(29,54,42,.09)}
+.home-legacy-image img{height:365px;border-radius:2px 48px 2px 2px;filter:saturate(.86) sepia(.04)}
+.home-legacy-image figcaption{padding:12px 4px 3px}
+.photo-mosaic{padding-top:58px;padding-bottom:62px}
+.photo-mosaic:before{background:linear-gradient(180deg,rgba(248,245,237,.95),rgba(248,245,237,.90)),url('images/memorial-roses.jpg') center/cover}
+.photo-tile{position:relative;border:1px solid rgba(180,148,93,.4);background:#e9e4d8;box-shadow:0 12px 30px rgba(31,54,42,.08)}
+.photo-tile:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(20,43,32,.02) 28%,rgba(14,38,29,.78) 100%)}
+.photo-tile img{filter:saturate(.82) contrast(.98)}
+.photo-tile-copy{position:relative;z-index:2}
+.home-process{background:#15382d}
+.home-process:before{background-position:left 47%;filter:saturate(.75)}
+.home-process:after{background:linear-gradient(270deg,rgba(13,43,32,.97) 0%,rgba(13,43,32,.88) 52%,rgba(13,43,32,.52) 100%)}
+.home-process-step>span{color:#dfc18a}
+.home-process-note{color:#e7d4ae}
+.home-closing{background:linear-gradient(90deg,rgba(248,245,237,.95),rgba(248,245,237,.84)),url('images/memorial-garden.jpg') center 58%/cover}
+.home-closing-rule{background:linear-gradient(90deg,transparent,#c6a66d,transparent)}
+.home-closing-quote{color:#173d30}
+@media(max-width:760px){
+ .home-hero:after{inset:9px}
+ .home-hero-image{background-position:40% center}
+ .home-legacy-image img{height:245px}
+ .photo-mosaic{padding-top:40px;padding-bottom:42px}
+ .home-process:before{background-position:32% center}
+}
+
 </style>
 
 <nav class="mobile-bottom-nav" aria-label="دسترسی سریع موبایل">
