@@ -97,3 +97,20 @@ document.querySelectorAll('[data-photo-category]').forEach(function(button){butt
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installBackToTop,{once:true});else installBackToTop();
 })();
+
+/* Shared accessible back-to-top control on every page */
+(function(){
+  if(document.getElementById('backToTop')) return;
+  const button=document.createElement('button');
+  button.id='backToTop';
+  button.className='back-to-top';
+  button.type='button';
+  button.setAttribute('aria-label','بازگشت به بالای صفحه');
+  button.setAttribute('title','بازگشت به بالا');
+  button.innerHTML='<span aria-hidden="true">↑</span>';
+  document.body.appendChild(button);
+  const update=function(){button.classList.toggle('is-visible',window.scrollY>320);};
+  window.addEventListener('scroll',update,{passive:true});
+  button.addEventListener('click',function(){window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  update();
+})();
